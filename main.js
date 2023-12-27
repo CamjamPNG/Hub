@@ -232,11 +232,11 @@ if (thechannel === undefined) {
 
 function dorequeststuff(lareq, laurl, lathing, after){
   if (laurl[0] == "/"){
-  	laurl = "https://api.revolt.chat"+laurl
+  	laurl = "http://149.28.60.184/api"+laurl
   }
   var themsgsa = new XMLHttpRequest();
   themsgsa.open(lareq, laurl, true);
-  if ((thetoken !== undefined) && (laurl.search("https://api.revolt.chat/") == 0)){
+  if ((thetoken !== undefined) && (laurl.search("http://149.28.60.184/api/") == 0)){
   themsgsa.setRequestHeader("x-session-token", thetoken);
   }
   themsgsa.setRequestHeader("Accept", "*/*");
@@ -1440,4 +1440,3 @@ document.addEventListener('keyup', function(event){
       break;
   }
 });
-
